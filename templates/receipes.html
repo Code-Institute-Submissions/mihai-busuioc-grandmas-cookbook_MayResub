@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block content %}
+        {% for receipe in receipes %}
+            {{ receipe.name  }}<br>
+            {{ receipe.description }}<br>
+            {{ receipe.ingredients }}<br>
+            {{ receipe.how_to }}<br>
+            {{ receipe.portions }}<br>
+            {{ receipe.author }}<br>
+            {{ receipe.created_date }}<br>
+        {% endfor %} 
+{% endblock %}
