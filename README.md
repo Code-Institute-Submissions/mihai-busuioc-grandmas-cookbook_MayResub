@@ -54,7 +54,7 @@ Grandma's Cookbook uses light vintage like  colors, to have a clear contrast wit
 overall visibility, and minimizing bombarding the visitors with colors, but rather finding the appropriate places to apply them.
 
 ## Typography
-I choose to use Smythe for the text due to it's vintage looks and give the page a bit more personality.
+I choose to use Yesteryear for the text headers due to it's vintage looks and give the page a bit more personality and the roboto for the main texts to help with readability.
 
 -------
 
