@@ -3,21 +3,23 @@ body {
     background-repeat: no-repeat; 
     background-position: center;
     background-size: cover;
-    height: 100vh
+    height: 100vh;
+    font-family: 'Yesteryear', cursive;
 }
 
 nav .brand-logo {
     font-size: 4vw;
-    font-family: 'Yesteryear', cursive;
     font-weight: 700;
 }
 
 .nav-extended, .sidenav {
     font-weight: 700;
-    font-family: 'Yesteryear', cursive;
 }
 
 h1, h2, h3, h4, h5{
-    font-family: 'Yesteryear', cursive;
+    font-weight: 700;
+}
+
+.li-head {
     font-weight: 700;
 }

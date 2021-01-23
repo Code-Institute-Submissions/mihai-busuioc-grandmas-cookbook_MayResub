@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% block content %}
+        
+            <div class="valign-wraper">
+
+            <h3 class="amber-text center-align text-lighten-5">Recipes</h3>
+
+        <ul class="collapsible popout">
+        {% for receipe in receipes %}
+            <li >
+                <div class="collapsible-header receipe-text grey-text text-darken-2 amber lighten-5"><i class="far fa-eye"></i>
+                    <span class="li-head">{{ receipe.name  }} : {{ receipe.description  }} </span>
+                </div>
+                <div class="collapsible-body amber lighten-5">
+
+                    <p class="li-head">Ingredients:</p><p> {{ receipe.ingredients }}</p>
+                    <p> Number of portions : {{ receipe.portions }} </p>
+                    <p>Author: {{ receipe.author }}</p>
+                    <p>Posted on: {{ receipe.created_date }}</p>
+
+
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+        </div>
+    {% endblock %}
