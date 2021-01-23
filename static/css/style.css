@@ -26,4 +26,19 @@ h1, h2, h3, h4, h5{
 .collapsible-header {
     margin: 10px;
     line-height: 40px;
+    border-radius: 10px;
+}
+.collapsible-body {
+    border-radius: 10px;
+}
+.search-card {
+    margin:35px;
+    border-radius: 10px;
+}
+.search-button {
+    border-radius: 20px;
+    font-size: 2vw;
+}
+.btn-small {
+    border-radius: 20px;
 }

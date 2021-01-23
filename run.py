@@ -25,6 +25,13 @@ def all_receipes():
     return render_template("recipes.html", receipes=receipes)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    receipes = mongo.db.receipes.find({"$text": {"$search": query}})
+    return render_template("recipes.html", receipes=receipes)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
