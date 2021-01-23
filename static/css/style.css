@@ -1,8 +1,23 @@
 body {
-    background-color:#f3eee7;
+    background-image:url("https://res.cloudinary.com/fr3shf4iry/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1611168596/annie-spratt-maS7GmsVeRs-unsplash_rbgbw6.jpg") ;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    height: 100vh
 }
-.nav-font {
+
+nav .brand-logo {
+    font-size: 4vw;
     font-family: 'Yesteryear', cursive;
-    font-size: 40px;
+    font-weight: 700;
+}
+
+.nav-extended, .sidenav {
+    font-weight: 700;
+    font-family: 'Yesteryear', cursive;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Yesteryear', cursive;
     font-weight: 700;
 }

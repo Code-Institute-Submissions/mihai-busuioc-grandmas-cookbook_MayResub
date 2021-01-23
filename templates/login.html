@@ -1,1 +1,44 @@
 {% extends "index.html" %}
+{% block content %}
+
+    <h3 class="center-align amber-text text-lighten-5">Log In</h3>
+
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
+            <div class="card-panel amber lighten-5">
+                <!--  Username input-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-cog grey-text text-darken-2 prefix"></i>
+                        <input id="username" name="username" class="validate" type="text" pattern="^[a-zA-Z0-9]{3,15}$"
+                            placeholder="Maximum 15 characters" minlength="3" maxlength="15" required>
+                        <label for="username">Username</label>
+                    </div>
+                </div>
+                <!--  Password input-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-lock grey-text text-darken-2 prefix"></i>
+                        <input id="password" placeholder="Minimum 8 characters" name="password" type="password" 
+                        minlength="8" maxlength="15" pattern="^[a-zA-Z0-9]{8,15}$" class="validate" required>
+                        <label for="password" >Password</label>
+                    </div>
+                </div>
+
+                <!-- submit-->
+                <div class="row">
+                    <button type="submit" class="col s12 btn-large amber-text text-lighten-5 grey darken-2">Log In
+                        <i class="fas fa-sign-in-alt"></i>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <h5 class="center-align grey-text text-darken-2">New User?
+                            <a href="{{ url_for('register')}}" class="red-text"> Register </a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
