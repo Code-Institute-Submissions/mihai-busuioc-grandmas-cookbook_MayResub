@@ -1,27 +1,33 @@
 {% extends "index.html" %}
 {% block content %}
         
-            <div class="valign-wraper">
-
-            <h3 class="amber-text center-align text-lighten-5">Recipes</h3>
-
+            
+        <h3 class="amber-text center-align text-lighten-5">Recipes</h3>
+        
         <ul class="collapsible popout">
-        {% for receipe in receipes %}
-            <li >
-                <div class="collapsible-header receipe-text grey-text text-darken-2 amber lighten-5"><i class="far fa-eye"></i>
-                    <span class="li-head">{{ receipe.name  }} : {{ receipe.description  }} </span>
+            {% for receipe in receipes %}
+            <li>
+                <div class="collapsible-header receipe-text grey-text text-darken-2 amber lighten-5">
+                    <div class="col s3">
+                        <i class="far fa-eye"></i>
+                    </div>
+                    <div class="col s9">
+                        <span class="li-head">{{ receipe.name | capitalize }} : {{ receipe.description | capitalize  }} </span>
+                    </div>
                 </div>
                 <div class="collapsible-body amber lighten-5">
-
-                    <p class="li-head">Ingredients:</p><p> {{ receipe.ingredients }}</p>
+        
+                    <p class="li-head">Ingredients:</p>
+                    <p> {{ receipe.ingredients }}</p>
                     <p> Number of portions : {{ receipe.portions }} </p>
-                    <p>Author: {{ receipe.author }}</p>
-                    <p>Posted on: {{ receipe.created_date }}</p>
-
-
+                    <p><em>Author: {{ receipe.author }}</em></p>
+                    <p class=" center-align">
+                        <a href="#" class="btn-small grey darken-2 amber-text ">Cook</a>
+                        <a href="{{ url_for('edit_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 amber-text ">Edit</a>
+                    </p>
                 </div>
             </li>
-        {% endfor %}
+            {% endfor %}
         </ul>
-        </div>
+        
     {% endblock %}

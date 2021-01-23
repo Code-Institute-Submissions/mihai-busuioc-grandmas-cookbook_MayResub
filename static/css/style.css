@@ -23,3 +23,7 @@ h1, h2, h3, h4, h5{
 .li-head {
     font-weight: 700;
 }
+.collapsible-header {
+    margin: 10px;
+    line-height: 40px;
+}
