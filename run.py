@@ -77,7 +77,7 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>" , methods=["GET", "POST"])
+@app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
@@ -113,9 +113,37 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    if request.method == "POST":
+        receipe = {
+            "name": request.form.get("name"),
+            "description": request.form.get("description"),
+            "ingredients": request.form.get("ingredients"),
+            "portions": request.form.get("portions"),
+            "how_to": request.form.get("how_to"),
+            "author": session["user"]
+        }
+        mongo.db.receipes.update({"_id": ObjectId(recipe_id)}, receipe)
+        flash("Recipe Successfully Modified")
+        return redirect(url_for("all_receipes"))
+
     recipe = mongo.db.receipes.find_one({"_id": ObjectId(recipe_id)})
     receipes = mongo.db.receipes.find().sort("name", 1)
-    return render_template("edit_recipe.html", recipe=recipe, receipes=receipes)
+    
+    return render_template(
+        "edit_recipe.html", recipe=recipe, receipes=receipes)
+
+
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.receipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe Successfully Deleted")
+    return redirect(url_for("all_receipes"))
+
+
+@app.route("/cookbook")
+def cookbook():
+    receipes = list(mongo.db.receipes.find().sort("name", 1))
+    return render_template("cookbook.html", receipes=receipes)
 
 
 

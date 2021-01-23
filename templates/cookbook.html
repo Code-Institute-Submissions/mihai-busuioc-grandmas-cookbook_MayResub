@@ -2,7 +2,7 @@
 {% block content %}
         
             
-        <h3 class="amber-text center-align text-lighten-5">Recipes</h3>
+        <h3 class="amber-text center-align text-lighten-5">Manage Recipes</h3>
         
         <ul class="collapsible popout">
             {% for receipe in receipes %}
@@ -22,11 +22,10 @@
                     <p> Number of portions : {{ receipe.portions }} </p>
                     <p><em>Author: {{ receipe.author }}</em></p>
                     <p class=" center-align">
-                        <a href="#" class="btn-small grey darken-2 amber-text text-lighten-5 ">Cook</a>
-                        {% if session.user|lower == receipe.author|lower or "admin"|lower %}
+                        
                         <a href="{{ url_for('edit_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 amber-text ">Edit</a>
-                        <a href="{{ url_for('delete_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 red-text ">Delete</a>
-                        {% endif %}
+                        <a href="{{ url_for('delete_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 amber-text ">Delete</a>
+                        
                     </p>
                 </div>
             </li>

@@ -11,7 +11,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-pencil-alt grey-text text-darken-2 prefix"></i>
                         <input id="name" name="name"  minlength="3" 
-                        maxlength="30" type="text" class="validate" required>
+                        value="{{ recipe.name }}" maxlength="30" type="text" class="validate" required>
                         <label for="name">Recipe Name</label>
                     </div>
                 </div>
@@ -19,8 +19,8 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-align-right grey-text text-darken-2 prefix"></i>
-                        <textarea id="description" placeholder="Maximum 20 characters " name="description" minlength="5" maxlength="20" 
-                        class="materialize-textarea validate" required ></textarea>
+                        <textarea id="description" placeholder="Maximum 15 characters " name="description" minlength="5" maxlength="15" 
+                         class="materialize-textarea validate" required >{{ recipe.description }}</textarea>
                         <label for="description">Short Description</label>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-shopping-basket grey-text text-darken-2 prefix"></i>
                         <textarea id="ingredients" placeholder="Add ingredients for the number of portions " name="ingredients" minlength="5" maxlength="200" 
-                        class="materialize-textarea validate" required ></textarea>
+                        class="materialize-textarea validate" required >{{ recipe.ingredients }}</textarea>
                         <label for="ingredients">Ingredients</label>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-utensils grey-text text-darken-2 prefix"></i>
-                        <input id="portions" name="portions"  minlength="1" 
+                        <input id="portions" name="portions"  minlength="1" value="{{ recipe.portions }}"
                         maxlength="2" pattern="^[0-9]{1,2}$" type="text" class="validate" required>
                         <label for="portions">Number of portions</label>
                     </div>
@@ -47,13 +47,16 @@
                     <div class="input-field col s12">
                         <i class="fas fa-book grey-text text-darken-2 prefix"></i>
                         <textarea id="how_to" placeholder="This is how you cook this!" name="how_to" minlength="5" maxlength="500" 
-                        class="materialize-textarea validate" required ></textarea>
+                        class="materialize-textarea validate" required >{{ recipe.how_to }}</textarea>
                         <label for="how_to">Cooking Instruction</label>
                     </div>
                 </div>
-                <!-- Submit button -->
+                <!-- Submit and cancel button -->
             <div class="row">
                 <div class="col s12 center-align">
+                    <a href="{{ url_for('all_receipes') }}" class="btn-large red">Cancel
+                        <i class="fas fa-times-circle right"></i>
+                    </a>
                     <button type="submit" class="btn-large grey darken-2 amber-text text-lighten-5">
                         Edit Recipe <i class="fas fa-edit right"></i>
                     </button>
