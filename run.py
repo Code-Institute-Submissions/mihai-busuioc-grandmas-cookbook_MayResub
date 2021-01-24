@@ -19,8 +19,8 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/all_receipes")
-def all_receipes():
+@app.route("/all_recipes")
+def all_recipes():
     receipes = mongo.db.receipes.find()
     return render_template("recipes.html", receipes=receipes)
 
@@ -52,7 +52,7 @@ def register():
         # Put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successfull")
-        return redirect(url_for("all_receipes"))
+        return redirect(url_for("all_recipes"))
     return render_template("register.html")
 
 
@@ -70,7 +70,7 @@ def login():
                     session["user"] =request.form.get("username").lower()
                     flash("Welcome, {}".format(request.form.get("username")))
                     return redirect(
-                        url_for("all_receipes"))
+                        url_for("all_recipes"))
             else:
                 # invalid pass
                 flash("Incorrect user and/or Password")
@@ -97,7 +97,7 @@ def logout():
     # remove user from session cookies
     flash("You have been logged out")
     session.pop("user")
-    return redirect(url_for("all_receipes"))
+    return redirect(url_for("all_recipes"))
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
@@ -113,7 +113,7 @@ def add_recipe():
         }
         mongo.db.receipes.insert_one(receipe)
         flash("Recipe Successfully Added")
-        return redirect(url_for("all_receipes"))
+        return redirect(url_for("all_recipes"))
 
     return render_template("add_recipe.html")
 
@@ -131,7 +131,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.receipes.update({"_id": ObjectId(recipe_id)}, receipe)
         flash("Recipe Successfully Modified")
-        return redirect(url_for("all_receipes"))
+        return redirect(url_for("all_recipes"))
 
     recipe = mongo.db.receipes.find_one({"_id": ObjectId(recipe_id)})
     receipes = mongo.db.receipes.find().sort("name", 1)
@@ -144,14 +144,13 @@ def edit_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.receipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
-    return redirect(url_for("all_receipes"))
+    return redirect(url_for("all_recipes"))
 
 
 @app.route("/cookbook")
 def cookbook():
     receipes = list(mongo.db.receipes.find().sort("name", 1))
     return render_template("cookbook.html", receipes=receipes)
-
 
 
 if __name__ == "__main__":

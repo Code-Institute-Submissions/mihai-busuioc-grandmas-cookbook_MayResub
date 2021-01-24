@@ -3,9 +3,16 @@ body {
     background-repeat: no-repeat; 
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    height: 150vh;
     font-family: 'Yesteryear', cursive;
-}
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
 
 nav .brand-logo {
     font-size: 4vw;
@@ -41,4 +48,8 @@ h1, h2, h3, h4, h5{
 }
 .btn-small {
     border-radius: 20px;
+}
+
+.footer-text {
+    font-family: 'Roboto', sans-serif;
 }

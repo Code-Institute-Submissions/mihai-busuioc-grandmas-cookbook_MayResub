@@ -16,7 +16,7 @@
                         <button type="submit" class="grey search-button darken-2 btn">
                             Search
                         </button>
-                        <a href="{{ url_for('all_receipes') }}" class="red search-button btn">Reset</a>
+                        <a href="{{ url_for('all_recipes') }}" class="red search-button btn">Reset</a>
                     </div>
                 </div>
             </form>
@@ -42,7 +42,9 @@
                     <p> Number of portions : {{ receipe.portions }} </p>
                     <p><em>Author: {{ receipe.author }}</em></p>
                     <p class=" center-align">
-                        <a href="#" class="btn-small grey darken-2 amber-text text-lighten-5 ">Cook</a>
+                        
+                        <a href="#recipeModal" class=" modal-trigger btn-small grey darken-2 amber-text text-lighten-5 ">Cook</a>
+                        
                         {% if session.user|lower == receipe.author|lower %}
                         <a href="{{ url_for('edit_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 amber-text ">Edit</a>
                         <a href="{{ url_for('delete_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 red-text ">Delete</a>
@@ -53,4 +55,26 @@
             {% endfor %}
         </ul>
         
+            <!-- Modal Structure -->
+        
+                            <div id="recipeModal" class="modal ">
+                                <div class="modal-content">
+                                <h4>Cooking Directions</h4>
+                                <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, 
+                                    and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea 
+                                    to the level of the spectator on a hillside, the sable cloud beneath was dished out, and 
+                                    the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn 
+                                    with silver. Looking down into the dark gulf below, I could see a ruddy light strea</p>
+                                </div>
+                                <div class="modal-footer">
+                                <a href="#!" class="modal-close  btn-flat">Done</a>
+                                </div>
+                            </div>
+        
+        
     {% endblock %}
+
+    
+    
+
+  
