@@ -4,10 +4,11 @@ body {
     background-position: center;
     background-size: cover;
     height: 150vh;
-    font-family: 'Yesteryear', cursive;
+    font-family:cursive;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-color: #616161;
   }
 
   main {
@@ -30,6 +31,9 @@ h1, h2, h3, h4, h5{
 .li-head {
     font-weight: 700;
 }
+.modal {
+    border-radius: 20px;
+}
 .collapsible-header {
     margin: 10px;
     line-height: 40px;
@@ -42,6 +46,9 @@ h1, h2, h3, h4, h5{
     margin:35px;
     border-radius: 10px;
 }
+.card-panel {
+    border-radius: 20px;
+}
 .search-button {
     border-radius: 20px;
     font-size: 2vw;
@@ -49,7 +56,9 @@ h1, h2, h3, h4, h5{
 .btn-small {
     border-radius: 20px;
 }
-
+.btn-large {
+    border-radius: 40px;
+}
 .footer-text {
-    font-family: 'Roboto', sans-serif;
+    font-family:sans-serif;
 }

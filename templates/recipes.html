@@ -40,7 +40,7 @@
                     <p class="li-head">Ingredients:</p>
                     <p> {{ receipe.ingredients }}</p>
                     <p> Number of portions : {{ receipe.portions }} </p>
-                    <p><em>Author: {{ receipe.author }}</em></p>
+                    <p><em>Author: {{ receipe.author| capitalize }}</em></p>
                     <p class=" center-align">
                         
                         <a href="#recipeModal{{ receipe.name }}" class=" modal-trigger btn-small grey darken-2 amber-text text-lighten-5 ">Cook</a>

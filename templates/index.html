@@ -30,7 +30,7 @@
                 <ul class="right  hide-on-med-and-down">
                     {% if session.user %}
                         <li><a style="font-size: x-large;" class="amber-text  text-lighten-5"
-                            href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+                            href="{{ url_for('add_recipe') }}">{{ session.user| capitalize }} Add Recipe </a></li>
                         {% if session.user|lower == "admin"|lower %}
                             <li><a style="font-size: x-large;" class="amber-text text-lighten-5"
                                 href="{{ url_for('cookbook') }}">Manage Recipes</a></li>
@@ -49,6 +49,7 @@
         <!-- mobile nav-->
         <ul class="sidenav " id="mobile-demo">
             {% if session.user %}
+                    <li><a style="font-size: larger;" href="{{ url_for('all_recipes') }}">  {{ session.user| capitalize }}</a></li>
                     <li><a style="font-size: larger;" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                 {% if session.user|lower == "admin"|lower %}
                     <li><a style="font-size: larger;" href="{{ url_for('logout') }}">Manage Recipe</a></li>
@@ -77,6 +78,12 @@
             {% block content %}
             {% endblock %}
         </div>
+        <div class="fixed-action-btn hide-on-med-and-down">
+  <a class="btn-floating amber lighten-5" href="#top"  >
+      <i class="fas fa-arrow-up grey-text text-darken-2 "></i></a>
+    
+  
+</div>
     </main>
     <!-- footer -->
     <footer class="page-footer valign-wrapper grey darken-2">
