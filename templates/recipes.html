@@ -43,7 +43,7 @@
                     <p><em>Author: {{ receipe.author }}</em></p>
                     <p class=" center-align">
                         
-                        <a href="#recipeModal" class=" modal-trigger btn-small grey darken-2 amber-text text-lighten-5 ">Cook</a>
+                        <a href="#recipeModal{{ receipe.name }}" class=" modal-trigger btn-small grey darken-2 amber-text text-lighten-5 ">Cook</a>
                         
                         {% if session.user|lower == receipe.author|lower %}
                         <a href="{{ url_for('edit_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 amber-text ">Edit</a>
@@ -56,25 +56,17 @@
         </ul>
         
             <!-- Modal Structure -->
-        
-                            <div id="recipeModal" class="modal ">
-                                <div class="modal-content">
-                                <h4>Cooking Directions</h4>
-                                <p>Apparently we had reached a great height in the atmosphere, for the sky was a dead black, 
-                                    and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea 
-                                    to the level of the spectator on a hillside, the sable cloud beneath was dished out, and 
-                                    the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn 
-                                    with silver. Looking down into the dark gulf below, I could see a ruddy light strea</p>
+                        {% for receipe in receipes %}
+                            <div id="recipeModal{{ receipe.name }}" class="modal">
+                                <div class="modal-content amber lighten-5 ">
+                                <h4 class="center-align grey-text text-darken-2">Cooking Directions</h4>
+                                <p>
+                                {{ receipe.how_to }}</p>
                                 </div>
-                                <div class="modal-footer">
+                                <div class="modal-footer amber lighten-5 ">
                                 <a href="#!" class="modal-close  btn-flat">Done</a>
                                 </div>
                             </div>
-        
+                        {% endfor %}
         
     {% endblock %}
-
-    
-    
-
-  
