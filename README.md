@@ -70,22 +70,23 @@ overall visibility, and minimizing bombarding the visitors with colors, but rath
 ### WireFrames
 
 <details>
-<summary>First page</summary>
-![First page](https://github.com/mihai-busuioc/grandmas-cookbook/blob/master/static/images/New_Wireframe.png)
-</details>
+<summary>First page</summary></details>
 
+![alt text](static/images/New_Wireframe.png)
 <details>
 <summary>LogedIn page</summary>
+
 ![LogedIn page](static/images/User.png)
 </details>
 
 <details>
 <summary>Logout page</summary>
+
 ![Logout Page](static/images/Logout.png)
 </details>
 
 ### Typography
-I choose to use Curseve  for the text  due to it's vintage looks and give the page a bit more personality  also not too vintage
+I choose to use Cursive  for the text  due to it's vintage looks and give the page a bit more personality  also not too vintage
  ( like Yesteryear) to help with readability.
 
 
