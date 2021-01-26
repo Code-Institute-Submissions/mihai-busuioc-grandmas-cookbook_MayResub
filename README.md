@@ -70,9 +70,11 @@ overall visibility, and minimizing bombarding the visitors with colors, but rath
 ### WireFrames
 
 <details>
-<summary>First page</summary></details>
+<summary>First page</summary>
 
 ![alt text](static/images/New_Wireframe.png)
+</details>
+
 <details>
 <summary>LogedIn page</summary>
 
