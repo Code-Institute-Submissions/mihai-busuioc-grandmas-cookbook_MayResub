@@ -69,9 +69,20 @@ overall visibility, and minimizing bombarding the visitors with colors, but rath
 
 ### WireFrames
 
+<details>
+<summary>First page</summary>
 ![First page](static/images/New_Wireframe.png)
+</details>
+
+<details>
+<summary>LogedIn page</summary>
 ![LogedIn page](static/images/User.png)
+</details>
+
+<details>
+<summary>Logout page</summary>
 ![Logout Page](static/images/Logout.png)
+</details>
 
 ### Typography
 I choose to use Curseve  for the text  due to it's vintage looks and give the page a bit more personality  also not too vintage
