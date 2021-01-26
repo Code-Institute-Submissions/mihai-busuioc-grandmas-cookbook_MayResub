@@ -194,5 +194,8 @@ Clicking delete will remove any recipe from database.
 - Adding How To steps, anything less then 8 characters will inform the user it's too short.
 
 ## Testing Bugs
+- when trying to register with a wrong length password the user was asked to correct the submisionbut wasn't informed
+on the conditions needed, Fixed
+- the flash message was not responsive, updated to a responsive text size
 
 Logo>> cut and stiled image from  openculture.com
