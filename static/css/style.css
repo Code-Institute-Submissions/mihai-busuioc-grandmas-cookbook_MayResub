@@ -62,3 +62,7 @@ h1, h2, h3, h4, h5{
 .footer-text {
     font-family:sans-serif;
 }
+
+.flashed-msg {
+    font-size: 5vw;
+}

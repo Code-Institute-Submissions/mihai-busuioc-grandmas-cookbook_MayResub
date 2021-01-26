@@ -66,16 +66,16 @@ def login():
         if existing_user:
             # verify hashed pass match input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] =request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
-                    return redirect(
+             existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(
                         url_for("all_recipes"))
             else:
                 # invalid pass
                 flash("Incorrect user and/or Password")
                 return redirect(url_for("login"))
-            
+
         else:
             # username doesn't exist
             flash("Incorrect user and/or Password")
@@ -135,7 +135,7 @@ def edit_recipe(recipe_id):
 
     recipe = mongo.db.receipes.find_one({"_id": ObjectId(recipe_id)})
     receipes = mongo.db.receipes.find().sort("name", 1)
-    
+
     return render_template(
         "edit_recipe.html", recipe=recipe, receipes=receipes)
 

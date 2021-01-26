@@ -156,9 +156,9 @@ in Chrome, Firefox, and Edge on Desktop, and native IOS browser.
 - Clicking "Grandma's Cookbook" get redirected to main landing page.
 
 ## Registration Page(Not logged in)
-- Attempted putting in 1 letter into username, and left password  blank Expecting feedback on all input boxes..
+- Attempted putting in 1 letter into username, and left password  blank Expecting feedback on all input boxes.
 - Attempted putting in 1 letter into username,  and add too short password Expecting feedback on all input boxes.
-- Fixed username to 5 letters, left  password  too short still block user from register.
+- Fixed username to 3 letters, left  password  too short still block user from register.
 - Fixed password, now all registration rules are correct, allowing user to register, Expecting flash " Registration complete"
 
 ## Login Page
@@ -188,9 +188,11 @@ Clicking delete will remove any recipe from database.
 - Attempting to submit the form empty, expecting to receive error message across the whole form.
 - Adding 1 letter in recipe name, but is told it's too short.
 - Adding more then 3, and get approved.
-- Adding letters into portions,  also more than 2 numbers not passing the validation.
+- Adding letters into portions,  also more than 2 numbers not passing the validation, informs user to add a number 1-99
 - Adding number works.
 - Adding ingredients, anything less then 5 characters will inform user it's too short.
-- Adding How To steps, anything less then 5 characters will inform the user it's too short.
+- Adding How To steps, anything less then 8 characters will inform the user it's too short.
+
+## Testing Bugs
 
 Logo>> cut and stiled image from  openculture.com

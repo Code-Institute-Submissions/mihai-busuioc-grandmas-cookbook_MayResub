@@ -11,7 +11,8 @@
                     <div class="input-field col s12">
                         <i class="fas fa-pencil-alt grey-text text-darken-2 prefix"></i>
                         <input id="name" name="name"  minlength="3" 
-                        maxlength="30" type="text" class="validate" required>
+                        maxlength="30" type="text" class="validate" title="Enter the Name consisting of 3-30 characters"
+                        required>
                         <label for="name">Recipe Name</label>
                     </div>
                 </div>
@@ -19,7 +20,8 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-align-right grey-text text-darken-2 prefix"></i>
-                        <textarea id="description" placeholder="Maximum 30 characters " name="description" minlength="5" maxlength="30" 
+                        <textarea id="description" placeholder="Maximum 30 characters " name="description" 
+                        title="Enter the short description consisting of 5-30 characters" minlength="5" maxlength="30" 
                         class="materialize-textarea validate" required ></textarea>
                         <label for="description">Short Description</label>
                     </div>
@@ -28,7 +30,8 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-shopping-basket grey-text text-darken-2 prefix"></i>
-                        <textarea id="ingredients" placeholder="Add ingredients for the number of portions " name="ingredients" minlength="5" maxlength="1000" 
+                        <textarea id="ingredients" placeholder="Add ingredients for the number of portions " name="ingredients"
+                        title="Enter the ingredients consisting of minimum 5 characters" minlength="5" maxlength="1000" 
                         class="materialize-textarea validate" required ></textarea>
                         <label for="ingredients">Ingredients</label>
                     </div>
@@ -38,7 +41,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-utensils grey-text text-darken-2 prefix"></i>
                         <input id="portions" name="portions"  minlength="1" 
-                        maxlength="2" pattern="^[0-9]{1,2}$" type="text" class="validate" required>
+                        maxlength="2" pattern="^[0-9]{1,2}$" type="text" class="validate" title="Enter a Number from 1-99" required>
                         <label for="portions">Number of portions</label>
                     </div>
                 </div>
@@ -46,7 +49,8 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-book grey-text text-darken-2 prefix"></i>
-                        <textarea id="how_to" placeholder="This is how you cook this!" name="how_to" minlength="5" maxlength="2000" 
+                        <textarea id="how_to" placeholder="This is how you cook this!" name="how_to" 
+                        title="Enter the Instructions consisting of minimum 5 characters" minlength="5" maxlength="2000" 
                         class="materialize-textarea validate" required ></textarea>
                         <label for="how_to">Cooking Instruction</label>
                     </div>
