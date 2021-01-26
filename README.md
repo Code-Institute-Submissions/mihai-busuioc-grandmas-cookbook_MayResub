@@ -71,7 +71,7 @@ overall visibility, and minimizing bombarding the visitors with colors, but rath
 
 <details>
 <summary>First page</summary>
-![First page](static/images/New_Wireframe.png)
+![First page](https://github.com/mihai-busuioc/grandmas-cookbook/blob/master/static/images/New_Wireframe.png)
 </details>
 
 <details>
