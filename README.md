@@ -7,8 +7,22 @@
 Experience Grandma's Cookbook, a easy to use recipe website, giving everyone access to their favorites just a few clicks away. 
 A safe and responsive website to provide you with the tools needed to try out your old favorite recipe.  Add your own and share the love.
 
+![alt text] (static/images/mockup.jpg)
 
-# UX
+
+## Contents
+1. [UX](#UX)
+2. [Design Decisions](#Design-Decisions)
+3. [Database](#Database)
+4. [Features](#Features)
+5. [Technologies](#Technologies)
+6. [Testing](#Testing)
+7. [Testing Bugs](#Testing-Bugs)
+8. [Deployment](#Deployment)
+9. [Credits](#Credits)
+11. [Disclaimer](#Disclaimer)
+
+## UX
 
 
 This website have been designed to give any visitors easy access to all of it's content without needing to signup,
@@ -17,17 +31,10 @@ This website have been designed to give any visitors easy access to all of it's 
 Making all content available to the visitor upon accessing the page. 
 
 
-## Traversing
-Key design decision allowing visitors, users, and administrator to access the entire page, and all CRUD functionality 
-(Create, Read, Update and Delete) within as few clicks as possible, yet get to experience the entire platform for ease
-of use.
-
-## Smart Search
-Built in Search comodity to manage the content on the website , allowing content to be found by searching for key ingredient,
- providing the visitor a quick overview and an easy to use website.
 
 
-## User Stories
+
+### User Stories
 
 - Everyone at work loved my grandma's chocolate cake and asked for the recipe.
 
@@ -43,57 +50,70 @@ Built in Search comodity to manage the content on the website , allowing content
 
 - Want to try a receipe from a friend.
 
+### Traversing
+Key design decision allowing visitors, users, and administrator to access the entire page, and all CRUD functionality 
+(Create, Read, Update and Delete) within as few clicks as possible, yet get to experience the entire platform for ease
+of use.
 
-----------------------------------------------------------------------------
+### Smart Search
+Built in Search comodity to manage the content on the website , allowing content to be found by searching for key ingredient,
+ providing the visitor a quick overview and an easy to use website.
 
-# Design Decisions
+
+## Design Decisions
 The design follows a minimalistic approach by only displaying content that is of value to the visitor, 
 and keeping any overflow out of the design process, and relying heavily on dynamic user content. 
 The Grandma's Cookbook takes much inspiration from the project Task-Manager from Coding Institute
 Grandma's Cookbook uses light vintage like  colors, to have a clear contrast with the websyte vintage theme  to enhance 
 overall visibility, and minimizing bombarding the visitors with colors, but rather finding the appropriate places to apply them.
 
-## Typography
+### WireFrames
+
+- ![First page](static/images/New_Wireframe.png)
+- ![LogedIn page](static/images/User.png)
+- ![Logout Page](static/images/Logout.png)
+
+### Typography
 I choose to use Curseve  for the text  due to it's vintage looks and give the page a bit more personality  also not too vintage
  ( like Yesteryear) to help with readability.
 
--------
 
-# Database
+
+## Database
 This website have 2 databases, 1 for users and 1 for recipes, these are both being used to connect with each other as
  well being used to store various calculations, and store all general information on the page. All the content on the page is 
  generated from these 2 databases.
 
 
-# Features
+## Features
 All the features were developed with dynamic user content with appropriate restrictions. Features like create, update, delete, 
  are hidden behind a registration wall or login portal, but this do not hinder visitors from viewing the overall content.
 
-## Home Page (visitor)
+### Home Page (visitor)
 The home page includes Log In and Registration menu at the very top, where all the highest rated recipes comes into view with the 
 option to search recipes by indredient or name. 
 
-## Home Page (Registered/logged in)
+### Home Page (Registered/logged in)
 After logging in a few new features appear, the header will now show Logout and your username and Add recipe 
 
-## Home Page ( common )
+### Home Page ( common )
 Visitors, Registered users and administrator can see all the recipes in a accordeon style that expands to show the ingredients, 
 number of portions and the author, click on the "Cook" button opens a modal with the instructions to cook the recipe.
 
 
-## Administrator Profile (logged in)
+### Administrator Profile (logged in)
 This page allows you to see every recipe and a new link to "Manage Recipes" for quick edit or delete. 
 
 
-## Add Recipe (Only available when logged in)
+### Add Recipe (Only available when logged in)
 This can be found as a menu link once logged in on the home page.
 Allowing the user to add their own recipe name, description text, portions, ingredients and the steps to make a recipe.
 This page looks the same for user and administrator
 
-## Edit Recipe (Only available when logged in and author of the recipe or admin inside the recipe accordeon )
+### Edit Recipe (Only available when logged in and author of the recipe or admin inside the recipe accordeon )
 Provides identical user interface as add recipe, but pulls all the data from the database to be edited 
 
-## Features I want to implement
+### Features I want to implement
 In time of development, I noticed multiple important features that should be added for the complete experience,
  but they are not necessary for the project to be completed and was left to be implemented later because of time constraints.
   Will be added after submision and grading:
@@ -102,39 +122,39 @@ In time of development, I noticed multiple important features that should be add
  - confirm password field on registration
  - popup modal to confirm deletion of recipes
 
-# Technologies
-## Languages
+## Technologies
+### Languages
 
 - HTML:	Creating the entire foundation for the website.
 - CSS :	Applying styling across all pages.
 - JavaScript	Add logic rules to all input forms and buttons.
 - Python	Runs the entire backend server 
 
-## Libraries
+### Libraries
 - Materialize:  Styling Framework to get a modern feel to the website.
 - Font Awesome:	Used for all website icons.
 - jQuery:	Simplifying some of the get id's for Javascript.
 - Google Fonts:	For all fonts on all pages.
 
-## Python Libraries
+### Python Libraries
 - Flask:	Required to run all route operations in the code.
 - OS:	Required to read environmental variables.
 - flask_pymongo:	Most search queries requires pyMongo to operate in the code.
 - bson:	Required to acquire the object ID of the different data-sets.
 - werkzeug.security	Required to operate hash for secure passwords.
 
-## Database
+### Database
 - MongoDB	Store all content for the database for recipes and users.
 
 
 
-# Testing
+## Testing
 Due to all the features on the website, the testing have been broken up in multiple sections, each covering testing 
 such as Intended use, Features, Responsiveness, Security and Code Testing, as well as Feedback. After all the tests 
 there will be a summary section for a quick overview over all passed tests and bugs found. All tests will be preformed 
 in Chrome, Firefox, and Edge on Desktop, and native IOS browser.
 
-## I have tested the following
+### I have tested the following
 
 - Intended use (Interactivity)
 - Responsiveness across devices
@@ -142,49 +162,49 @@ in Chrome, Firefox, and Edge on Desktop, and native IOS browser.
 - W3 CSS Validator
 - JS Hint
 - PEP8
-## Intended Use on Chrome, Firefox and Edge (Interaction)
-- Landing Page(Not logged in)
+### Intended Use on Chrome, Firefox and Edge (Interaction)
+#### Landing Page(Not logged in)
 - Opening website on full screen expecting all images, icons, labels to be displayed with correct ratio.
 - Clicking on a recipe  expecting it to open the accordeon to recipe correctly.
 - Clicking Login to redirect me to login page.
 - Clicking Register to redirect me to registration page.
 
-## Recipe Page(Not logged in)
+#### Recipe Page(Not logged in)
 - Opening Recipe , expecting all icons, text to display correctly.
 - Clicking on login to redirect me to login page.
 - Clicking on register to redirect me to registration page page.
 - Clicking "Grandma's Cookbook" get redirected to main landing page.
 
-## Registration Page(Not logged in)
+#### Registration Page(Not logged in)
 - Attempted putting in 1 letter into username, and left password  blank Expecting feedback on all input boxes.
 - Attempted putting in 1 letter into username,  and add too short password Expecting feedback on all input boxes.
 - Fixed username to 3 letters, left  password  too short still block user from register.
 - Fixed password, now all registration rules are correct, allowing user to register, Expecting flash " Registration complete"
 
-## Login Page
+#### Login Page
 - Typed in username only and click login, asked for password.
 - Typed in username and wrong password, -expected feedback, username and/or password incorect
 - Typed in only password, but no username, was informed to type in username too.
 - Typed in correct username and correct password, website allowed me to login.
 - When logged in successfully, expecting the page to redirect user to landing page.
 
-## Landing Page(Logged in)
+#### Landing Page(Logged in)
 - Expecting the navigation bar to no longer have Login and Register, but Logout Username  and Add recipe
 
-## Recipe Page(Not author, but Logged in)
+#### Recipe Page(Not author, but Logged in)
 - Visiting Recipe page that my user have not made, expect to not see edit or delete buttons.
 - view recipe correctly.
 - Clicked website name to redirect to main page.
-## Recipe Page(author, and Logged in)
+#### Recipe Page(author, and Logged in)
 - Visiting recipe page as author, expecting to see delete button and edit button 
 - Clicking edit button redirect user to update page correctly.
 - Clicking delete button, delete the recipe and redirect user to main page.
 
 
-## Admin Login (only accessible when logged in as Administrator)
+#### Admin Login (only accessible when logged in as Administrator)
 Clicking delete will remove any recipe from database.
 
-## Create new recipe(Only accessible logged in)
+#### Create new recipe(Only accessible logged in)
 - Attempting to submit the form empty, expecting to receive error message across the whole form.
 - Adding 1 letter in recipe name, but is told it's too short.
 - Adding more then 3, and get approved.
@@ -198,4 +218,91 @@ Clicking delete will remove any recipe from database.
 on the conditions needed, Fixed
 - the flash message was not responsive, updated to a responsive text size
 
-Logo>> cut and stiled image from  openculture.com
+
+
+## Deployment
+The following steps will explain how you can get the website running on heroku and locally with just a few steps.
+
+ ### Tools required to be installed
+- Python 3 (Pip 3 comes installed by default)
+- Git
+-Heroku CLI
+
+### How to Clone and set up the website locally in a few steps
+1. Clone website
+    - Go to [GitHub](www.github.com)
+    - Click search .
+    - Locate mihai-busuioc/grandmas-cookbook
+    - Open grandmas-cookbook
+    - Click the green button clone to download.
+    - Or clone from URL using the following command in terminal: got clone https://github.com/mihai-busuioc/grandmas-cookbook.git
+
+2. Installing Requirements.
+Once you have the project cloned on your computer, you are ready to set everything up.
+
+- Open the Terminal and navigate to grandmas-cookbook folder on the computer.
+- Install the libraries from requirements.txt by typing pip3 install -r requirements.txt
+
+3. Setting up the database keys
+Once the project is cloned, and you have the libraries installed from requirements.txt, we can now set up the database.
+Create a python file called env.py, and place it outside of the folder structure, next to run.py.
+Inside the newly created env.py file, you need to add information to 2 variables and 1 import.
+At the top of env.py add the following line :
+    import os.
+Then add the following lines below.
+    os.environ["Mongo_URI"] = "Mongodb+srv....".
+    os.environ["SECRET_KEY"] = "Can be anything you want".
+    os.environ["MONGO_DBNAME"] = 'Your database name'.
+4. Running the app locally 
+
+- Run python3 run.py
+- Paste http://127.0.0.1:5000/ into your browser URL to access.
+
+### Deploy Grandma's Cookbook on Heroku
+Before beginning this step, you need to complete the above step 1. Clone Website.
+
+1. Setting up Heroku
+- Create an account on [Heroku](heroku.com).
+- Click New button, then Click Create new app.
+- Give it a name and choose your region.
+- Click Create App.
+- Find your App name on the dash board, and enter.
+- Click Settings, and locate Config Vars, and fill in like shown below (Just edit out the placeholder text).
+- Key	Value
+- IP	0.0.0.0
+- PORT	5000
+- MONGO_URI	"mongodb+srv:......"
+- MONGO_DBNAME	Name of the database
+- SECRET_KEY	"Secret key you made for local"
+2. Setting up our files
+At this stage, go back to your IDE, we are now setting everything up for pushing to Heroku.
+
+- If the Procfile is missing, please preform the following command in your terminal echo web: python3 run.py > Procfile
+- If the requirements.txt is missing, please preform the following command in your terminal pip3 freeze > requirements.txt
+3. Deploy to Heroku
+- In your Terminal type heroku login.
+- Then git push heroku master .
+- Open Heroku website.
+- Navigate to the app (Grandma's Cookbook), and click Open App, and now everything should be running.
+
+## Credits
+Big shout out to *gbenga_mentor* who made everything fall into place on the inception of the project meeting, this made the entire 
+project completely understandable and everything else that followed was much easier.
+
+Also thanks to the Code Institute lessons i was able to put this in practice part of the project is taken from the 
+lessons, and tweaked to some degree.
+
+A huge shout out to igor_ci in the Tutor session that provided some great input on the challenge I had with the modal id not comming on because of the  double 
+for loop. Helped me a ton. Just the eyes i needed.
+
+### Images
+
+- All  images are [by Annie Spratt] (https://unsplash.com/@anniespratt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)  [on Unsplash ](https://unsplash.com/s/photos/vintage-kitchen?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+
+and are hosted free on [Cloudinary](https://cloudinary.com/)
+- The logo from the readme file is cut and styled from  openculture.com
+- Favicon from favicon-generator.org
+- 
+
+## Disclaimer
+This project is for Educational purpose only
