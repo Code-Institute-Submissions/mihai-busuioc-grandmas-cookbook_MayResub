@@ -7,7 +7,7 @@
 Experience Grandma's Cookbook, a easy to use recipe website, giving everyone access to their favorites just a few clicks away. 
 A safe and responsive website to provide you with the tools needed to try out your old favorite recipe.  Add your own and share the love.
 
-![alt text] (static/images/mockup.jpg)
+![alt text](static/images/mockup.jpg)
 
 
 ## Contents
@@ -69,9 +69,9 @@ overall visibility, and minimizing bombarding the visitors with colors, but rath
 
 ### WireFrames
 
-- ![First page](static/images/New_Wireframe.png)
-- ![LogedIn page](static/images/User.png)
-- ![Logout Page](static/images/Logout.png)
+![First page](static/images/New_Wireframe.png)
+![LogedIn page](static/images/User.png)
+![Logout Page](static/images/Logout.png)
 
 ### Typography
 I choose to use Curseve  for the text  due to it's vintage looks and give the page a bit more personality  also not too vintage
