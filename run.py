@@ -18,6 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# main page route
 @app.route("/")
 @app.route("/all_recipes")
 def all_recipes():
@@ -25,6 +26,7 @@ def all_recipes():
     return render_template("recipes.html", receipes=receipes)
 
 
+# search
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -32,6 +34,7 @@ def search():
     return render_template("recipes.html", receipes=receipes)
 
 
+# register
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -56,6 +59,7 @@ def register():
     return render_template("register.html")
 
 
+# log in
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -84,6 +88,7 @@ def login():
     return render_template("login.html")
 
 
+# profile
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
@@ -92,6 +97,7 @@ def profile(username):
     return render_template("profile.html", username=username)
 
 
+# logout
 @app.route("/logout")
 def logout():
     # remove user from session cookies
@@ -100,6 +106,7 @@ def logout():
     return redirect(url_for("all_recipes"))
 
 
+# add recipe
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -118,6 +125,7 @@ def add_recipe():
     return render_template("add_recipe.html")
 
 
+# edit recipe
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
@@ -140,6 +148,7 @@ def edit_recipe(recipe_id):
         "edit_recipe.html", recipe=recipe, receipes=receipes)
 
 
+# delete recipe
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.receipes.remove({"_id": ObjectId(recipe_id)})
@@ -147,6 +156,7 @@ def delete_recipe(recipe_id):
     return redirect(url_for("all_recipes"))
 
 
+# admin - manage recipe
 @app.route("/cookbook")
 def cookbook():
     receipes = list(mongo.db.receipes.find().sort("name", 1))
