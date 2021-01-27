@@ -50,8 +50,8 @@ Making all content available to the visitor upon accessing the page.
 
 - Want to try a receipe from a friend.
 
-### Traversing
-Key design decision allowing visitors, users, and administrator to access the entire page, and all CRUD functionality 
+### Usage 
+Design decision that allow visitors, users, and administrator to access the entire page, and all CRUD functionality 
 (Create, Read, Update and Delete) within as few clicks as possible, yet get to experience the entire platform for ease
 of use.
 
@@ -311,7 +311,7 @@ for loop. Helped me a ton. Just the eyes i needed.
 
 ### Images
 
-- All  images are [by Annie Spratt] (https://unsplash.com/@anniespratt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)  [on Unsplash ](https://unsplash.com/s/photos/vintage-kitchen?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
+- All  images are [by Annie Spratt](https://unsplash.com/@anniespratt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)  [on Unsplash ](https://unsplash.com/s/photos/vintage-kitchen?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText)
 
 and are hosted free on [Cloudinary](https://cloudinary.com/)
 - The logo from the readme file is cut and styled from  openculture.com
