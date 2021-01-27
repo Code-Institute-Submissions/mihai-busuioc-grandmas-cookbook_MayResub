@@ -213,6 +213,7 @@ in Chrome, Firefox, and Edge on Desktop, and native IOS browser.
 - W3 CSS Validator
 - JS Hint
 - PEP8
+- Lighthouse ( google dev tools)
 ### Intended Use on Chrome, Firefox and Edge (Interaction)
 #### Landing Page(Not logged in)
 - Opening website on full screen expecting all images, icons, labels to be displayed with correct ratio.
@@ -252,8 +253,9 @@ in Chrome, Firefox, and Edge on Desktop, and native IOS browser.
 - Clicking delete button, delete the recipe and redirect user to main page.
 
 
-#### Admin Login (only accessible when logged in as Administrator)
-Clicking delete will remove any recipe from database.
+#### Admin Login (only accessible when logged in as Administrator-Manage Recipes page)
+- Clicking delete will remove any recipe from database.
+- Clicking Edit will redirect to edit_recipe.html
 
 #### Create new recipe(Only accessible logged in)
 - Attempting to submit the form empty, expecting to receive error message across the whole form.
@@ -361,4 +363,5 @@ and are hosted free on [Cloudinary](https://cloudinary.com/)
 
 ## Disclaimer
 This project is for Educational purpose only
+
 The assesor can create a "superadmin" user with all the admin powers .
