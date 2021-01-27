@@ -13,7 +13,7 @@
                         <input id="username" name="username" class="validate" type="text" pattern="^[a-zA-Z0-9]{3,15}$"
                             placeholder="Maximum 15 characters" minlength="3" maxlength="15"
                             title="Enter an Username consisting of 3-15 characters" required>
-                        <label for="username">Username</label>
+                        <label for="username" class="user-pass-text">Username</label>
                     </div>
                 </div>
                 <!--  Password input-->
@@ -23,7 +23,7 @@
                         <input id="password" placeholder="Minimum 8 characters" name="password" type="password"
                             minlength="8" maxlength="15" pattern="^[a-zA-Z0-9]{8,15}$" class="validate" 
                             title="Enter an Password consisting of 8-15 characters" required>
-                        <label for="password">Password</label>
+                        <label for="password" class="user-pass-text">Password</label>
                     </div>
                 </div>
 
@@ -35,7 +35,7 @@
                 </div>
                 <div class="row">
                     <div class="col s12">
-                        <h5 class="center-align grey-text text-darken-2">Already Registered?
+                        <h5 class="center-align grey-text text-darken-2">Already Registered?<br>
                             <a href="{{ url_for('login')}}" class="red-text"> Log In</a>
                         </h5>
                     </div>

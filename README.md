@@ -231,6 +231,7 @@ Clicking delete will remove any recipe from database.
 - when trying to register with a wrong length password the user was asked to correct the submisionbut wasn't informed
 on the conditions needed, Fixed
 - the flash message was not responsive, updated to a responsive text size
+- the google lighthouse found some performance issues regarding readability of label font and size, Fixed
 
 
 
@@ -261,12 +262,15 @@ Once you have the project cloned on your computer, you are ready to set everythi
 Once the project is cloned, and you have the libraries installed from requirements.txt, we can now set up the database.
 Create a python file called env.py, and place it outside of the folder structure, next to run.py.
 Inside the newly created env.py file, you need to add information to 2 variables and 1 import.
-At the top of env.py add the following line :
-    import os.
-Then add the following lines below.
-    os.environ["Mongo_URI"] = "Mongodb+srv....".
-    os.environ["SECRET_KEY"] = "Can be anything you want".
-    os.environ["MONGO_DBNAME"] = 'Your database name'.
+At the top of env.py add the following lines :
+- import os
+- blank line
+- os.environ.setdefault("IP", "0.0.0.0")
+- os.environ.setdefault("PORT", "5000")
+- os.environ.setdefault("SECRET_KEY", "your_secret_key_here")
+- os.environ.setdefault("MONGO_URI", "mongodb+srv://<USERNAME>:<PASSWORD>@<CLUSTER>-4g3i1.mongodb.net/<DATABASE>?retryWrites=true&w=majority")
+- os.environ.setdefault("MONGO_DBNAME", "your DB name")
+
 4. Running the app locally 
 
 - Run python3 run.py
