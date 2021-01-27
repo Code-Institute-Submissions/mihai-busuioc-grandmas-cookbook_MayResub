@@ -33,7 +33,7 @@
                     {% if session.user %}
                         <li><a style="font-size: x-large;" class="amber-text  text-lighten-5"
                             href="{{ url_for('add_recipe') }}">{{ session.user| capitalize }} Add Recipe </a></li>
-                        {% if session.user|lower == "admin"|lower %}
+                        {% if session.user|lower == "admin"|lower or "superadmin"|lower %}
                             <li><a style="font-size: x-large;" class="amber-text text-lighten-5"
                                 href="{{ url_for('cookbook') }}">Manage Recipes</a></li>
                         {% endif %}

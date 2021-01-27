@@ -98,6 +98,43 @@ This website have 2 databases, 1 for users and 1 for recipes, these are both bei
  well being used to store various calculations, and store all general information on the page. All the content on the page is 
  generated from these 2 databases.
 
+<details>
+<summary>User Database</summary>
+
+| ID       	| db generated id 	|
+|----------	|-----------------	|
+| Name     	| String          	|
+| Password 	| String/Hashed   	|
+
+</details>
+
+<details>
+<summary>Recipe Database</summary>
+
+| ID       	  | db generated id 	|
+|------------ |-----------------	|
+| Name     	  | String          	|
+| Description | String  	        |
+| Ingredients | String  	        |
+| Portions    | String  	        |
+| How_to      | String  	        |
+| Author      | String  	        |
+
+</details>
+
+#### User database explained
+
+- Username: Stores the chosen username added by the user.
+- Password: Is a hashed password, so no password is in clear text inside the database.
+
+#### Recipe database explained.
+
+- Name: Is what the user choose to call the recipe.
+- Description: This is where you can type a small text to "sell" your recipe.
+- Ingredients: The user inputs all ingredients to use.
+- Portions: Added by user, simply how many portions added the recipe contains.
+- How_to: User input of the cooking method for the recipe.
+- Author: Input from session .
 
 ## Features
 All the features were developed with dynamic user content with appropriate restrictions. Features like create, update, delete, 
@@ -304,7 +341,7 @@ At this stage, go back to your IDE, we are now setting everything up for pushing
 - Navigate to the app (Grandma's Cookbook), and click Open App, and now everything should be running.
 
 ## Credits
-Big shout out to *gbenga_mentor* who made everything fall into place on the inception of the project meeting, this made the entire 
+Big shout out to my mentor [Adeye Adegbenga](https://github.com/deye9) who made everything fall into place on the inception of the project meeting, this made the entire 
 project completely understandable and everything else that followed was much easier.
 
 Also thanks to the Code Institute lessons i was able to put this in practice part of the project is taken from the 
@@ -324,3 +361,4 @@ and are hosted free on [Cloudinary](https://cloudinary.com/)
 
 ## Disclaimer
 This project is for Educational purpose only
+The assesor can create a "superadmin" user with all the admin powers .
