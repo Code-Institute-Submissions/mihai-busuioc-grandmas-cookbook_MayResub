@@ -54,7 +54,7 @@
                     <li><a style="font-size: larger;" href="{{ url_for('all_recipes') }}">  {{ session.user| capitalize }}</a></li>
                     <li><a style="font-size: larger;" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                 {% if session.user|lower == "admin"|lower %}
-                    <li><a style="font-size: larger;" href="{{ url_for('logout') }}">Manage Recipe</a></li>
+                    <li><a style="font-size: larger;" href="{{ url_for('cookbook') }}">Manage Recipe</a></li>
                 {% endif %}
                     <li><a style="font-size: larger;" href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
