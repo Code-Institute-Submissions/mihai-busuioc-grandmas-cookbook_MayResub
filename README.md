@@ -170,7 +170,6 @@ In time of development, I noticed multiple important features that should be add
   Will be added after submision and grading:
  - pictures on recipes 
  - email on registeration
- - confirm password field on registration
  - popup modal to confirm deletion of recipes
 
 ## Technologies
@@ -232,7 +231,9 @@ in Chrome, Firefox, and Edge on Desktop, and native IOS browser.
 - Attempted putting in 1 letter into username, and left password  blank Expecting feedback on all input boxes.
 - Attempted putting in 1 letter into username,  and add too short password Expecting feedback on all input boxes.
 - Fixed username to 3 letters, left  password  too short still block user from register.
-- Fixed password, now all registration rules are correct, allowing user to register, Expecting flash " Registration complete"
+- Fixed password , Confirm password left blank Expecting feedback on Confirm Password.
+- Input Confirm password different from Password Expecting flash " Password don't match!"
+- Fixed password and Confirm password, now all registration rules are correct, allowing user to register, Expecting flash " Registration complete"
 
 #### Login Page
 - Typed in username only and click login, asked for password.

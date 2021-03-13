@@ -32,18 +32,18 @@
                         <i class="far fa-eye"></i>
                     </div>
                     <div class="col s9">
-                        <span class="li-head">{{ receipe.name | capitalize }} : {{ receipe.description | capitalize  }} </span>
+                        <span class="li-head">View > {{ receipe.name | capitalize }} : {{ receipe.description | capitalize  }} </span>
                     </div>
                 </div>
                 <div class="collapsible-body amber lighten-5">
         
                     <p class="li-head">Ingredients:</p>
                     <p> {{ receipe.ingredients }}</p>
-                    <p> Number of portions : {{ receipe.portions }} </p>
+                    <p class="li-head"> Number of portions : {{ receipe.portions }} </p>
                     <p><em>Author: {{ receipe.author| capitalize }}</em></p>
                     <p class=" center-align">
                         
-                        <a href="#recipeModal{{ receipe.name.replace(' ','_') }}" class=" modal-trigger btn-small grey darken-2 amber-text text-lighten-5 ">Cook</a>
+                        <a href="#recipeModal{{ receipe.name.replace(' ','_') }}" class=" modal-trigger btn-small grey darken-2 amber-text text-lighten-5 ">Info</a>
                         
                         {% if session.user|lower == receipe.author|lower %}
                         <a href="{{ url_for('edit_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 amber-text ">Edit</a>
