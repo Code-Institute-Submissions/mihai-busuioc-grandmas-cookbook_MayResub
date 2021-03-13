@@ -207,27 +207,28 @@ in Chrome, Firefox, and Edge on Desktop, and native IOS browser.
 
 ### I have tested the following
 
-- Intended use (Interactivity)
+- Intended use/ User Stories (Interactivity)
 - Responsiveness across devices
 - W3 HTML Validator using URL and copy/paste code
 - W3 CSS Validator
 - JS Hint
 - PEP8
 - Lighthouse ( google dev tools)
-### Intended Use on Chrome, Firefox and Edge (Interaction)
-#### Landing Page(Not logged in)
+### Intended Use / User Stories on Chrome, Firefox and Edge (Interaction)
+#### Landing Page(Not logged in / visitors )
 - Opening website on full screen expecting all images, icons, labels to be displayed with correct ratio.
 - Clicking on a recipe  expecting it to open the accordeon to recipe correctly.
+- Clicking on "Cook" inside the recipe accordeon opens a modal with the cooking instructions.
 - Clicking Login to redirect me to login page.
 - Clicking Register to redirect me to registration page.
 
-#### Recipe Page(Not logged in)
+#### Recipe Page(Not logged in / visitors)
 - Opening Recipe , expecting all icons, text to display correctly.
 - Clicking on login to redirect me to login page.
 - Clicking on register to redirect me to registration page page.
 - Clicking "Grandma's Cookbook" get redirected to main landing page.
 
-#### Registration Page(Not logged in)
+#### Registration Page(Not logged in / visitors)
 - Attempted putting in 1 letter into username, and left password  blank Expecting feedback on all input boxes.
 - Attempted putting in 1 letter into username,  and add too short password Expecting feedback on all input boxes.
 - Fixed username to 3 letters, left  password  too short still block user from register.
@@ -240,7 +241,7 @@ in Chrome, Firefox, and Edge on Desktop, and native IOS browser.
 - Typed in correct username and correct password, website allowed me to login.
 - When logged in successfully, expecting the page to redirect user to landing page.
 
-#### Landing Page(Logged in)
+#### Landing Page(Logged in / contributor )
 - Expecting the navigation bar to no longer have Login and Register, but Logout Username  and Add recipe
 
 #### Recipe Page(Not author, but Logged in)
@@ -271,6 +272,9 @@ in Chrome, Firefox, and Edge on Desktop, and native IOS browser.
 on the conditions needed, Fixed
 - the flash message was not responsive, updated to a responsive text size
 - the google lighthouse found some performance issues regarding readability of label font and size, Fixed
+- found errors on the modal name in w3c validator - Fixed
+- found warnings in w3c validator for section heading - Fixed
+- the background image was fixed to 150vh showing only on half page on mobile - Fixed
 
 
 
