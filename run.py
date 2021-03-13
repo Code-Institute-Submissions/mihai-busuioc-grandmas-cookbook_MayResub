@@ -38,9 +38,8 @@ def search():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        form = request.form.to_dict()
         # Check if pass is confirmed 
-        if form['password'] == form['passwordConfirm']:
+        if request.form.get('password') == request.form.get('passwordConfirm'):
             # check if username already in db
             existing_user = mongo.db.users.find_one(
                 {"username": request.form.get("username").lower()})
@@ -62,7 +61,7 @@ def register():
         else:
             flash("Passwords don't match!")
             return redirect(url_for('register'))
-            
+
     return render_template("register.html")
 
 
