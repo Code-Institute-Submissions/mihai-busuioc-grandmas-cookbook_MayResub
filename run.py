@@ -38,7 +38,7 @@ def search():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-        # Check if pass is confirmed 
+        # Check if pass is confirmed
         if request.form.get('password') == request.form.get('passwordConfirm'):
             # check if username already in db
             existing_user = mongo.db.users.find_one(
@@ -50,7 +50,8 @@ def register():
 
             register = {
                 "username": request.form.get("username").lower(),
-                "password": generate_password_hash(request.form.get("password"))
+                "password": generate_password_hash(
+                    request.form.get("password"))
             }
             mongo.db.users.insert_one(register)
 
