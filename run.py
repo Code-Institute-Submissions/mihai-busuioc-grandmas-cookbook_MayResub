@@ -119,6 +119,7 @@ def add_recipe():
         receipe = {
             "name": request.form.get("name"),
             "description": request.form.get("description"),
+            "image": request.form.get("image"),
             "ingredients": request.form.get("ingredients"),
             "portions": request.form.get("portions"),
             "how_to": request.form.get("how_to"),
@@ -138,6 +139,7 @@ def edit_recipe(recipe_id):
         receipe = {
             "name": request.form.get("name"),
             "description": request.form.get("description"),
+            "image": request.form.get("image"),
             "ingredients": request.form.get("ingredients"),
             "portions": request.form.get("portions"),
             "how_to": request.form.get("how_to"),

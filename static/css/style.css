@@ -86,3 +86,9 @@ nav .brand-logo {
 .footer-text {
     font-family:sans-serif;
 }
+
+/*  recipe images*/
+.recipe-img{
+    height: 400px;
+    width: 400px;
+}

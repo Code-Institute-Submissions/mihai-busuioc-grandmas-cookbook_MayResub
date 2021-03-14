@@ -36,11 +36,20 @@
                     </div>
                 </div>
                 <div class="collapsible-body amber lighten-5">
-        
+                    
+                     <div class="row">
+                    <div class="col s12 m6">
                     <p class="li-head">Ingredients:</p>
-                    <p> {{ receipe.ingredients }}</p>
+                    {% for list in receipe.ingredients.splitlines() %}
+                    <p> {{ list }}</p>
+                    {% endfor %}
                     <p class="li-head"> Number of portions : {{ receipe.portions }} </p>
                     <p><em>Author: {{ receipe.author| capitalize }}</em></p>
+                    </div>
+                    <div class="col s12 m6 recipe-img">
+                     <img src="{{ receipe.image }}" class="responsive-img recipe-img" alt="Image">
+                     </div>
+                     </div>
                     <p class=" center-align">
                         
                         <a href="#recipeModal{{ receipe.name.replace(' ','_') }}" class=" modal-trigger btn-small grey darken-2 amber-text text-lighten-5 ">Info</a>
@@ -60,8 +69,9 @@
                             <div id="recipeModal{{ receipe.name.replace(' ','_') }}" class="modal">
                                 <div class="modal-content amber lighten-5 ">
                                 <h4 class="center-align grey-text text-darken-2">Cooking Directions</h4>
-                                <p>
-                                {{ receipe.how_to }}</p>
+                                {% for list in receipe.how_to.splitlines() %}
+                                    <p> {{ list }}</p>
+                                {% endfor %}
                                 </div>
                                 <div class="modal-footer amber lighten-5 ">
                                 <a href="#!" class="modal-close  btn-flat">Done</a>

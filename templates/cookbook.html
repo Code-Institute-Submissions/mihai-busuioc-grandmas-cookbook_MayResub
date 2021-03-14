@@ -16,11 +16,19 @@
                     </div>
                 </div>
                 <div class="collapsible-body amber lighten-5">
-        
+                    <div class="row">
+                    <div class="col s12 m6">
                     <p class="li-head">Ingredients:</p>
-                    <p> {{ receipe.ingredients }}</p>
-                    <p> Number of portions : {{ receipe.portions }} </p>
+                    {% for list in receipe.ingredients.splitlines() %}
+                    <p> {{ list }}</p>
+                    {% endfor %}
+                    <p class="li-head"> Number of portions : {{ receipe.portions }} </p>
                     <p><em>Author: {{ receipe.author }}</em></p>
+                    </div>
+                    <div class="col s12 m6 recipe-img">
+                     <img src="{{ receipe.image }}" class="responsive-img recipe-img" alt="Image">
+                     </div>
+                     </div>
                     <p class=" center-align">
                         
                         <a href="{{ url_for('edit_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 amber-text ">Edit</a>
