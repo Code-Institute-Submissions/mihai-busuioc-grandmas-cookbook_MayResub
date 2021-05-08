@@ -95,7 +95,8 @@ nav .brand-logo {
 
 /*  recipe images*/
 .recipe-img {
-    height: 400px;
+    object-fit: cover;
+    height: 400px!important;
     width: 400px;
 }
 
