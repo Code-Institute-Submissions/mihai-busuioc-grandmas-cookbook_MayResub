@@ -36,15 +36,11 @@ Making all content available to the visitor upon accessing the page.
 
 ### User Stories
 
-- 1. Want to use it as my own digital recipe book for easy sharing. 
-
-- 2. Quick access to recipes for cooking that is easy to follow.
-
-- 3. Want to add and edit my own recipe to help others cook my recipes.
-
-- 4. I want the recipe listing feature to be searchable, so I can search for specific recipes I may be interested in.
-
-- 5. I want an easy way to login or signup to the website.
+1. Want to use it as my own digital recipe book for easy sharing. 
+2. Quick access to recipes for cooking that is easy to follow.
+3. Want to add and edit my own recipe to help others cook my recipes.
+4. I want the recipe listing feature to be searchable, so I can search for specific recipes I may be interested in.
+5. I want an easy way to login or signup to the website.
 
 
 ### Usage 
