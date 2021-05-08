@@ -8,9 +8,9 @@ body {
     min-height: 100vh;
     flex-direction: column;
     background-color: #616161;
-  }
+}
   
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5 {
     font-weight: 700;
 }
 
@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5{
 
 main {
     flex: 1 0 auto;
-  }
+}
 
 /* Navbar */
 nav .brand-logo {
@@ -74,6 +74,12 @@ nav .brand-logo {
     font-size: 2vw;
 }
 
+.fixed-action-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+}
+
 .btn-small {
     border-radius: 20px;
 }
@@ -88,13 +94,13 @@ nav .brand-logo {
 }
 
 /*  recipe images*/
-.recipe-img{
+.recipe-img {
     height: 400px;
     width: 400px;
 }
-.error-div{
+
+.error-div {
     position: absolute;
     top: 40%;
     margin-top: -50px;
-    
-}​
+}
