@@ -167,9 +167,7 @@ Provides identical user interface as add recipe, but pulls all the data from the
 In time of development, I noticed multiple important features that should be added for the complete experience,
  but they are not necessary for the project to be completed and was left to be implemented later because of time constraints.
   Will be added after submision and grading:
- - pictures on recipes 
  - email on registeration
- - popup modal to confirm deletion of recipes
 
 ## Technologies
 ### Languages
@@ -234,7 +232,7 @@ in Chrome, Firefox, and Edge on Desktop, and native IOS browser.
 
 #### User Story 5 - I want an easy way to login or signup to the website.
  - Two simple pages for these functions, where only two inputs are required, and clear instructions displayed regarding the requirements for these inputs.
- 
+
 #### Landing Page (Not logged in / visitors )
 - Opening website on full screen expecting all images, icons, labels to be displayed with correct ratio.
 - Clicking on a recipe  expecting it to open the accordeon to recipe correctly.
