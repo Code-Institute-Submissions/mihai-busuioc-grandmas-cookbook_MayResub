@@ -32,12 +32,28 @@
                     <p class=" center-align">
                         
                         <a href="{{ url_for('edit_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 amber-text ">Edit</a>
-                        <a href="{{ url_for('delete_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 amber-text ">Delete</a>
+                        <a href="#deleteModal{{ receipe.name.replace(' ','_') }}" class=" modal-trigger btn-small grey darken-2 red-text  ">Delete</a>
                         
                     </p>
                 </div>
             </li>
             {% endfor %}
         </ul>
+
+        <!-- Modal Structure -->
+                        {% for receipe in receipes %}
+            <!--delete confirm modal-->
+                            <div class="modal" id="deleteModal{{ receipe.name.replace(' ','_') }}">
+                                <div class="modal-content amber lighten-5 ">
+                                    <h4 class="center-align grey-text text-darken-2" >Deleting Recipe Permanently</h4>
+                                    <h3>Deleting {{ receipe.name }}!!!</h3>
+                                    <p>Are you sure?</p>
+                                </div>
+                                <div class="modal-footer amber lighten-5 ">
+                                    <a href="#!" class="modal-close  btn-flat">Cancel</a>
+                                    <a href="{{ url_for('delete_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 red-text ">Delete</a>
+                                </div>
+                            </div>
+                        {% endfor %}
         
     {% endblock %}
