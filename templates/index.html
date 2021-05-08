@@ -56,7 +56,7 @@
                     <li><a style="font-size: larger;" href="{{ url_for('all_recipes') }}">  Home </a></li>
                     <li><a style="font-size: larger;" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                 {% if session.user|lower == "admin"|lower or session.user|lower == "superadmin"|lower %}
-                    <li><a style="font-size: larger;" href="{{ url_for('cookbook') }}">Manage Recipe</a></li>
+                    <li><a style="font-size: larger;" href="{{ url_for('cookbook') }}">Manage Recipes</a></li>
                 {% endif %}
                     <li><a style="font-size: larger;" href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
