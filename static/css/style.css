@@ -92,3 +92,9 @@ nav .brand-logo {
     height: 400px;
     width: 400px;
 }
+.error-div{
+    position: absolute;
+    top: 40%;
+    margin-top: -50px;
+    
+}​
