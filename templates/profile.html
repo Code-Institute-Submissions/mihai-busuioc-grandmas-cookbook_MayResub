@@ -4,19 +4,11 @@
     
 <h2 class="amber-text center-align text-lighten-5">{{ username | capitalize }}'s Profile</h2>
    
-        <div class="row">
-            <div class="col s4">
-            </div>
-            <div class="col s4 center-align">
-                <a href="{{ url_for('add_recipe') }}" class="btn-large grey darken-2 green-text">Add Recipe</a>
-            </div>
-            <div class="col s4">
-            </div>
-        </div>
+    
 
         <div class="row">
             <div class="col s12 m8 offset-m2">
-                
+               
                 <h5 class="amber-text center-align text-lighten-5">
                     
                     See all the recipes you have added below:
@@ -62,6 +54,13 @@
                     </p>
                 </div>
             </li>
+            {% else %}
+            <h5 class="amber-text center-align text-lighten-5">
+                    
+                    You haven't added any receipe. Add some recipes!
+
+                </h5>
+               
             {% endfor %}
         </ul>
             <!-- Modal Structure -->

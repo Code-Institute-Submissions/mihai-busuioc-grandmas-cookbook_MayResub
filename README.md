@@ -115,6 +115,7 @@ This website have 2 databases, 1 for users and 1 for recipes, these are both bei
 |------------ |-----------------	|
 | Name     	  | String          	|
 | Description | String  	        |
+| Image       | String              |
 | Ingredients | String  	        |
 | Portions    | String  	        |
 | How_to      | String  	        |
@@ -131,6 +132,7 @@ This website have 2 databases, 1 for users and 1 for recipes, these are both bei
 
 - Name: Is what the user choose to call the recipe.
 - Description: This is where you can type a small text to "sell" your recipe.
+- Image: The user adds the url of an image of the receipe.
 - Ingredients: The user inputs all ingredients to use.
 - Portions: Added by user, simply how many portions added the recipe contains.
 - How_to: User input of the cooking method for the recipe.

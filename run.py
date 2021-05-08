@@ -107,8 +107,6 @@ def profile(username):
         return render_template(
             "profile.html", username=username, receipes=receipes)
 
-    return redirect(url_for("login"))
-
 
 # logout
 @app.route("/logout")
