@@ -227,8 +227,9 @@ in Chrome, Firefox, and Edge on Desktop, and native IOS browser.
  - Edit Recipe form has existing recipe details pre-filled in form to make it easier for user to edit.
  - Form input requirements are kept simple, and clear instructions provided regarding input requirements displayed on form.
 
-#### User User Story 4 - I want the recipe listing feature to be searchable, so I can search for specific recipes I may be interested in.
- - Clear search function at top of recipes page, enabling searching by recipe title/ingredients.
+#### User User Story 4 - I want the recipe listing feature to be searchable, so I can search for recipes I may be interested in.
+ - Clear search function at top of recipes page, enabling searching by recipe title.
+ - The search function olso supports searching for ingredients to make it easier for me to choose what to cook with the ingredients i have.
 
 #### User Story 5 - I want an easy way to login or signup to the website.
  - Two simple pages for these functions, where only two inputs are required, and clear instructions displayed regarding the requirements for these inputs.
