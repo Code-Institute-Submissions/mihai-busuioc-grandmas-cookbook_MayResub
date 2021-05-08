@@ -69,6 +69,7 @@
         
             <!-- Modal Structure -->
                         {% for receipe in receipes %}
+                        <!--info modal-->
                             <div id="recipeModal{{ receipe.name.replace(' ','_') }}" class="modal">
                                 <div class="modal-content amber lighten-5 ">
                                 <h4 class="center-align grey-text text-darken-2">Cooking Directions</h4>
@@ -80,7 +81,7 @@
                                 <a href="#!" class="modal-close  btn-flat">Done</a>
                                 </div>
                             </div>
-
+            <!--delete confirm modal-->
                             <div class="modal" id="deleteModal{{ receipe.name.replace(' ','_') }}">
                                 <div class="modal-content amber lighten-5 ">
                                     <h4 class="center-align grey-text text-darken-2" >Deleting Recipe Permanently</h4>
@@ -92,7 +93,6 @@
                                     <a href="{{ url_for('delete_recipe', recipe_id=receipe._id)}}" class="btn-small grey darken-2 red-text ">Delete</a>
                                 </div>
                             </div>
-                                
                         {% endfor %}
         
     {% endblock %}
