@@ -36,19 +36,16 @@ Making all content available to the visitor upon accessing the page.
 
 ### User Stories
 
-- Everyone at work loved my grandma's chocolate cake and asked for the recipe.
+- 1. Want to use it as my own digital recipe book for easy sharing. 
 
-- Want to use it as my own digital recipe book for easy sharing.
+- 2. Quick access to recipes for cooking that is easy to follow.
 
-- Sharing my favorite recipe with co-workers, family and friends.
+- 3. Want to add and edit my own recipe to help others cook my recipes.
 
-- Quick access to recipes for cooking that is easy to follow.
+- 4. I want the recipe listing feature to be searchable, so I can search for specific recipes I may be interested in.
 
-- Want to add my own recipe to help others cook my recipes.
+- 5. I want an easy way to login or signup to the website.
 
-- A family member added a recipe they want to share.
-
-- Want to try a receipe from a friend.
 
 ### Usage 
 Design decision that allow visitors, users, and administrator to access the entire page, and all CRUD functionality 
@@ -216,10 +213,32 @@ in Chrome, Firefox, and Edge on Desktop, and native IOS browser.
 - PEP8
 - Lighthouse ( google dev tools)
 ### Intended Use / User Stories on Chrome, Firefox and Edge (Interaction)
-#### Landing Page(Not logged in / visitors )
+#### User Story 1 - I want to use it as my own digital recipe book for easy sharing. 
+ - The title of the site gives an idea of its purpose.
+ - The homepage displays a suitable hero image.
+
+#### User Story 2 - Quick access to recipes for cooking that is easy to follow.
+ - On the homepage all the recipes are presented with images inside an accordeon layout to make it easi to see multiple recipes at first glance.
+ - Clicking on "info" inside the recipe accordeon opens a modal with the cooking instructions.
+ - Clicking on a recipe  will open the accordeon to recipe with all the info inside.
+
+#### User Story 3 - I want to add and edit my own recipe to help others cook my recipes.
+ - Buttons for these functions have been included on the profile page and on the homepage on the recipes posted by the logged in user.
+ - Edit/Delete recipe buttons placed below individual recipe  to make it easy to select recipe for editing/deleting.
+ - Add Recipe also appears on the navbar (once user is logged in).
+ - Edit Recipe form has existing recipe details pre-filled in form to make it easier for user to edit.
+ - Form input requirements are kept simple, and clear instructions provided regarding input requirements displayed on form.
+
+#### User User Story 4 - I want the recipe listing feature to be searchable, so I can search for specific recipes I may be interested in.
+ - Clear search function at top of recipes page, enabling searching by recipe title/ingredients.
+
+#### User Story 5 - I want an easy way to login or signup to the website.
+ - Two simple pages for these functions, where only two inputs are required, and clear instructions displayed regarding the requirements for these inputs.
+ 
+#### Landing Page (Not logged in / visitors )
 - Opening website on full screen expecting all images, icons, labels to be displayed with correct ratio.
 - Clicking on a recipe  expecting it to open the accordeon to recipe correctly.
-- Clicking on "Cook" inside the recipe accordeon opens a modal with the cooking instructions.
+- Clicking on "info" inside the recipe accordeon opens a modal with the cooking instructions.
 - Clicking Login to redirect me to login page.
 - Clicking Register to redirect me to registration page.
 
