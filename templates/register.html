@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus grey-text text-darken-2 prefix"></i>
-                        <input id="username" name="username" class="validate" type="text" pattern="^[a-zA-Z0-9]{3,15}$"
+                        <input id="username" name="username" class="validate" type="text" pattern="[0-9a-zA-Z\W+]{3,15}"
                             placeholder="Maximum 15 characters" minlength="3" maxlength="15"
                             title="Enter an Username consisting of 3-15 characters" required>
                         <label for="username" class="user-pass-text">Username</label>
@@ -21,8 +21,8 @@
                     <div class="input-field col s12">
                         <i class="fas fa-user-lock grey-text text-darken-2 prefix"></i>
                         <input id="password" placeholder="Minimum 8 characters" name="password" type="password"
-                            minlength="8" maxlength="15" pattern="^[a-zA-Z0-9]{8,15}$" class="validate" 
-                            title="Enter an Password consisting of 8-15 characters" required>
+                            minlength="8" maxlength="15" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required class="validate" >  
+                            
                         <label for="password" class="user-pass-text">Password</label>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                     <div class="input-field col s12">
                         <i class="fas fa-user-lock grey-text text-darken-2 prefix"></i>
                         <input id="confirmPassword" placeholder="Type your password again" name="passwordConfirm" type="password"
-                            minlength="8" maxlength="15" pattern="^[a-zA-Z0-9]{8,15}$" class="validate" 
+                            minlength="8" maxlength="15" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}" class="validate" 
                             title="Type your password again" required>
                         <label for="confirmPassword" class="user-pass-text">Confirm Password</label>
                     </div>

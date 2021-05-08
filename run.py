@@ -101,7 +101,13 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
+    receipes = list(mongo.db.receipes.find())
+    # if existing user display profile
+    if session["user"]:
+        return render_template(
+            "profile.html", username=username, receipes=receipes)
+
+    return redirect(url_for("login"))
 
 
 # logout
